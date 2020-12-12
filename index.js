@@ -24,11 +24,6 @@ const configureRouter = options => (config = { ...config, ...options });
  * middlewares.
  */
 class Router {
-  basePath = '/';
-  app = null;
-  handlers = {};
-  middlewares = {};
-
   constructor() {
     this.router = express.Router();
     const router = Router.routers[this.constructor.name];
@@ -144,7 +139,12 @@ const _createRouter = router => {
     return;
   }
 
-  Router.routers[router.constructor.name] = { handlers: {}, middlewares: {} };
+  Router.routers[router.constructor.name] = {
+    handlers: {},
+    middlewares: {},
+    basePath: '/',
+    app: null,
+  };
 };
 
 const request = method => path => (target, key, descriptor) => {
