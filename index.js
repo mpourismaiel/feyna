@@ -28,8 +28,8 @@ class Router {
     this.router = express.Router();
     const router = Router.routers[this.constructor.name];
 
-    if (this.middlewares.before) {
-      this.router.use(this.middlewares.before);
+    if (router.middlewares.before) {
+      this.router.use(router.middlewares.before);
     }
 
     Object.keys(router.handlers).forEach(name => {
@@ -46,8 +46,8 @@ class Router {
       this.router[method](path, middlewares, handler);
     });
 
-    if (this.middlewares.after) {
-      this.router.use(this.middlewares.after);
+    if (router.middlewares.after) {
+      this.router.use(router.middlewares.after);
     }
 
     if (!router.app || !router.basePath) {
