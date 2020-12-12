@@ -1,0 +1,33 @@
+{
+  "name": "feyna",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express-jwt": "^6.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-proposal-decorators": "^7.12.1",
+    "@babel/preset-env": "^7.12.10",
+    "express": "^4.17.1"
+  },
+  "peerDependencies": {
+    "@babel/cli": "7.12.x",
+    "@babel/core": "7.12.x",
+    "@babel/node": "7.12.x",
+    "@babel/plugin-proposal-class-properties": "7.12.x",
+    "@babel/plugin-proposal-decorators": "7.12.x",
+    "@babel/preset-env": "7.12.x",
+    "express": "4.17.x"
+  }
+}
